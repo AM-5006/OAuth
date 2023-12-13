@@ -4,7 +4,7 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from .models import User
 
-
+@csrf_exempt
 def save_user_info(request):
     if request.method == 'POST':
         data = {}
