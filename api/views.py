@@ -27,7 +27,7 @@ def save_user_info(request):
                 'first_name': user_info.get('given_name'),
                 'last_name': user_info.get('family_name'),
                 'google_id': user_info.get('id'),
-                'token': user_info.get('id_token', '')  
+                'token': user_info.get(token, '')  
             }
 
             return JsonResponse({'success': True, 'data': user_data})
