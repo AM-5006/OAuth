@@ -13,7 +13,7 @@ pipeline {
                 script {
                     def activateScript = "/home/ubuntu/env/bin/activate"
                     // Use the source command to activate the virtual environment
-                    sh "source ${activateScript}"
+                    sh "sudo . ${activateScript}"
                 }
             }
         }
