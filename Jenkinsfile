@@ -11,12 +11,9 @@ pipeline {
         stage('Activate Virtual Environment') {
             steps {
                 script {
-                    // Ensure Bash shell is used
-                    def shell = isUnix() ? 'sh' : 'bat'
-
-                    // Activate the virtual environment
                     def activateScript = "/home/ubuntu/env/bin/activate"
-                    sh "${shell} -c '. ${activateScript}'"
+                    // Use the source command to activate the virtual environment
+                    sh "source ${activateScript}"
                 }
             }
         }
