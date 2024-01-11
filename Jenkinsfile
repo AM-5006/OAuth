@@ -1,12 +1,6 @@
 pipeline {
     agent any
 
-    options {
-        script {
-            shebang '#!/bin/bash'
-        }
-    }
-
     stages {
         stage('Checkout') {
             steps {
