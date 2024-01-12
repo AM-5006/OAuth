@@ -6,7 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 from .models import User
 
 def index(requets):
-    return HttpResponse("Bye, World!")
+    return HttpResponse("Hello, World!")
 
 @csrf_exempt
 def save_user_info(request):
