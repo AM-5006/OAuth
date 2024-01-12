@@ -13,9 +13,6 @@ pipeline {
                 script {
                     // Stop Supervisor
                     sh 'sudo supervisorctl stop all'
-
-                    // Stop Nginx
-                    sh 'sudo service nginx stop'
                 }
             }
         }
@@ -38,7 +35,7 @@ pipeline {
                     sh 'sudo supervisorctl start all'
 
                     // Start Nginx
-                    sh 'sudo service nginx start'
+                    sh 'sudo service nginx restart'
                 }
             }
         }
