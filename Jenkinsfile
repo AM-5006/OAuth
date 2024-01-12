@@ -8,16 +8,6 @@ pipeline {
             }
         }
 
-        stage('Activate Virtual Environment') {
-            steps {
-                script {
-                    def activateScript = "/home/ubuntu/env/bin/activate"
-                    // Use the source command to activate the virtual environment
-                    sh ". ${activateScript}"
-                }
-            }
-        }
-
         stage('Pull Code Changes') {
             steps {
                 script {
